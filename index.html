@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ADHOC TECH COMPANY – Bootcamp Registration</title>
+
+    <style>
+        body {
+            background: #0e0e16;
+            color: white;
+            font-family: Arial;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* HEADER */
+        header {
+            background: #0b0b14;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid #222;
+        }
+
+        header h2 {
+            margin: 0;
+            font-size: 26px;
+        }
+
+        .ceo {
+            font-size: 18px;
+            font-weight: bold;
+            color: #4bb8ff;
+        }
+
+        /* GLOBAL CARD STYLE */
+        .card {
+            background: #161622;
+            margin: 20px auto;
+            padding: 25px;
+            width: 90%;
+            border-radius: 15px;
+            box-shadow: 0 0 10px #000;
+        }
+
+        .card h2, .card h3 {
+            margin-bottom: 12px;
+            border-bottom: 1px solid #333;
+            padding-bottom: 6px;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 10px;
+            margin-top: 6px;
+            margin-bottom: 15px;
+            border-radius: 8px;
+            border: none;
+            background: #1f1f2e;
+            color: white;
+        }
+
+        button {
+            width: 90%;
+            margin: 20px auto;
+            display: block;
+            padding: 15px;
+            background: #4bb8ff;
+            border: none;
+            border-radius: 10px;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #2e95d8;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h2>ADHOC TECH COMPANY – Project Bootcamp</h2>
+    <div class="ceo">CEO: Devika Prakruthi</div>
+</header>
+
+<!-- CEO MESSAGE -->
+<section class="card">
+    <div style="display: flex; gap: 25px; align-items: flex-start;">
+        <img src="YOUR_CEO_IMAGE_URL_HERE"
+             style="width: 180px; height: 180px; object-fit: cover; border-radius: 16px;">
+        
+        <div>
+            <h2>Message from the CEO</h2>
+
+            <p>
+                The <strong>Project Day Bootcamp</strong> was successfully conducted at Aditya College
+                by <strong>ADHOC NETWORK</strong> as part of our mission to build practical,
+                industry-ready skills among students.
+            </p>
+
+            <p>
+                Students collaborated in teams, worked with real datasets, and presented
+                meaningful insights using modern tools — experiences that build future-ready talent.
+            </p>
+
+            <p>
+                I appreciate the dedication of all mentors and participants who made this
+                bootcamp successful. The skills learned here will strongly support your careers.
+            </p>
+
+            <p>
+                <strong>Devika Pakruthi</strong><br>
+                Chief Executive Officer<br>
+                ADHOC NETWORK
+            </p>
+        </div>
+    </div>
+</section>
+
+
+<!-- ABOUT BOOTCAMP -->
+<section class="card">
+    <h2>About the Bootcamp</h2>
+
+    <p>
+        This bootcamp bridges the gap between academic knowledge and industry requirements.
+        Students work on real-world challenges, develop teamwork, and use tools applied
+        in leading tech companies.
+    </p>
+
+    <p>
+        The core objective is to strengthen problem-solving skills and ensure students
+        build practical, industry-oriented experience.
+    </p>
+</section>
+
+
+<!-- HIGHLIGHTS -->
+<section class="card">
+    <h2>Bootcamp Highlights</h2>
+    <ul>
+        <li>Hands-on learning with real industry datasets</li>
+        <li>Team-based collaboration and execution</li>
+        <li>Guidance from industry mentors</li>
+        <li>Exposure to modern tools & frameworks</li>
+        <li>Real-world problem solving</li>
+        <li>Professional project presentation</li>
+    </ul>
+</section>
+
+
+<!-- INSTRUCTIONS -->
+<section class="card">
+    <h2>Important Instructions for Participants</h2>
+    <ol>
+        <li>Each team must have a Lead and 4–6 members.</li>
+        <li>Enter accurate details — submissions sync directly to Google Sheets.</li>
+        <li>Choose a problem statement that can be implemented practically.</li>
+        <li>Final working demo must be presented on Project Day.</li>
+        <li>Maintain discipline and follow mentor instructions.</li>
+    </ol>
+</section>
+
+
+<!-- REGISTRATION FORM -->
+<form id="bootcampForm">
+
+    <div class="card">
+        <h3>Team Details</h3>
+
+        <label>College</label>
+        <select name="college" required>
+            <option value="">Select College</option>
+            <option>Aditya Degree College</option>
+            <option>Aditya Degree College for Womens</option>
+        </select>
+
+        <label>Branch</label>
+        <select name="branch" required>
+            <option value="">Select Branch</option>
+            <option>BCA</option>
+            <option>BSC(CS)</option>
+            <option>BCA(DS)</option>
+            <option>BSC(DS)</option>
+            <option>BAC1</option>
+            <option>BAC2</option>
+            <option>BCA(CS)</option>
+        </select>
+
+        <label>Section</label>
+        <select name="section" required>
+            <option value="">Select Section</option>
+            <option>A</option>
+            <option>B</option>
+            <option>C</option>
+            <option>D</option>
+        </select>
+
+        <label>Team Name</label>
+        <input type="text" name="teamName" required>
+    </div>
+
+    <div class="card">
+        <h3>Team Lead (Member 1)</h3>
+
+        <label>Name</label>
+        <input type="text" name="leadName" required>
+
+        <label>Roll No</label>
+        <input type="text" name="leadRoll" required>
+
+        <label>Email</label>
+        <input type="email" name="leadEmail" required>
+
+        <label>Phone</label>
+        <input type="text" name="leadPhone" required>
+    </div>
+
+    <div id="members"></div>
+
+    <script>
+        const members = [2,3,4,5,6];
+        let container = document.getElementById("members");
+
+        members.forEach(num => {
+            container.innerHTML += `
+                <div class="card">
+                    <h3>Member ${num}</h3>
+                    <label>Name</label>
+                    <input type="text" name="m${num}_name" required>
+                    <label>Roll No</label>
+                    <input type="text" name="m${num}_roll" required>
+                    <label>Email</label>
+                    <input type="email" name="m${num}_email" required>
+                    <label>Phone</label>
+                    <input type="text" name="m${num}_phone" required>
+                </div>`;
+        });
+    </script>
+
+    <button type="submit">Submit Registration</button>
+</form>
+
+
+<!-- CONTACT SUPPORT -->
+<section class="card">
+    <h2>Need Help?</h2>
+    <p>If you face any issues with registration or project execution, contact us.</p>
+
+    <p>
+        <strong>Support Email:</strong> adhocnetwork.helpdesk@gmail.com<br>
+        <strong>Mentor Contact:</strong> +91 98765 43210
+    </p>
+</section>
+
+
+<!-- GOOGLE SHEET API SUBMISSION -->
+<script>
+document.getElementById("bootcampForm").addEventListener("submit", async function (e) {
+    e.preventDefault();
+
+    const formData = new FormData(this);
+    let dataObj = {};
+
+    formData.forEach((value, key) => dataObj[key] = value);
+
+    await fetch("https://script.google.com/macros/s/AKfycbxpf6DInWgIlO8krt5JcWh1slivXC9S16dvY9mlHZDKv6lTzCOY_YWJD-xgdCgaC3EY/exec", {
+        method: "POST",
+        body: JSON.stringify({ contents: JSON.stringify(dataObj) }),
+        headers: { "Content-Type": "text/plain;charset=utf-8" }
+    });
+
+    alert("Form Submitted Successfully!");
+    this.reset();
+});
+</script>
+
+</body>
+</html>
